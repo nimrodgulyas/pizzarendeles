@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzéria</title>
+</head>
+
+<body>
+    <h1>Rendelés</h1>
+
+    <p>
+    <form action="https://httpbin.org/post" method="post">
+        <label for="nev">Név:</label>
+        <input type="text" name="nev" id="nev" placeholder="pl.: Gulyás Nimród" required>
+        </p>
+
+        <p>
+            <label for="phone-number">Telefonszám:</label>
+            <input type="tel" name="phone-number" id="phone-number" minlength="12" maxlength="15"
+                placeholder="+36201234567" required>
+        </p>
+        <p>
+        <label for="Country">Ország:</label>
+        <input type="text" name="country" id="country" placeholder="Magyarország" required>
+        <label for="postal-code">Irányítószám:</label>
+        <input type="text" name="postal-code" id="postal-code" placeholder="2750" required>
+        <label for="City">Város:</label>
+        <input type="text" name="city" id="city" placeholder="Nagykőrös" required>
+        <label for="Street-name">Utca neve:</label>
+        <input type="text" name="street-name" id="street-name" placeholder="Kossuth Lajos Utca" required>
+        <label for="House-number">Házszám:</label>
+        <input type="text" name="house-number" id="house-number" placeholder="36" required>
+        </p>
+  <p><strong>Tészta:</strong></p>
+  <p>
+    <input type="radio" id="v" name="teszta"
+           value="vekony" checked>
+    <label for="v">Vékony</label>
+  </p>
+  <p>
+    <input type="radio" id="vs" name="teszta"
+           value="vastag">
+    <label for="vs">Vastag</label>
+  </p>
+
+  <p><strong>Méret:</strong></p>
+  <p>
+    <input type="radio" id="k" name="meret"
+           value="kicsi">
+    <label for="k">24cm</label>
+  </p>
+    <p>
+    <input type="radio" id="k" name="meret"
+           value="közepes">
+    <label for="k">28cm</label>
+  </p>
+  <p>
+    <input type="radio" id="n" name="meret"
+           value="nagy">
+    <label for="n">32cm</label>
+  </p>
+
+  <p>
+    <label for="pizza"><strong>Pizzáink:</strong></label>
+    <select id="meret" name="meret">
+      <option value="">-- válassz --</option>
+      <option value="forro-kedvence">Forró Kedvence</option>
+      <option value="juni-alma">Juni álma</option>
+      <option value="sonka-kukorica" selected>Sonkás kukoricás</option>
+      <option value="magyaros">Magyaros</option>
+      <option value="szalamis">Szalámis</option>
+      <option value="negysajtos">Négysajtos</option>
+    </select>
+  </p>
+
+
+
+
+  <p>Kérsz extra feltétet?(Ha nem akkor hagyd üresen)</p>
+
+  <p>
+    <input type="checkbox" id="s" name="feltet"
+           value="sajt">
+    <label for="s">Extra sajt</label>
+  </p>
+  <p>
+    <input type="checkbox" id="g" name="feltet"
+           value="gomba" checked>
+    <label for="g">Gomba</label>
+  </p>
+  <p>
+    <input type="checkbox" id="h" name="feltet"
+           value="hagyma">
+    <label for="h">Hagyma</label>
+  </p>
+
+    <p>
+    <input type="checkbox" id="h" name="feltet"
+           value="kukorica">
+    <label for="h">Kukorica</label>
+  </p>
+        <p>
+            <label for="uz">Egyéb megjegyzés:</label><br>
+            <textarea id="uz" name="uzenet" rows="5" cols="34" placeholder="Írd le, miben segíthetünk…"></textarea>
+        </p>
+        <button type="submit">Küldés</button>
+    </form>
+</body>
+
+</html>
